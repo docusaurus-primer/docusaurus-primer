@@ -1,9 +1,17 @@
 {
-    "name": "root",
-    "version": "0.0.0",
-    "license": "GLPv3",
-    "private": true,
-    "workspaces": [
-      "packages/*"
-    ]
+  "name": "root",
+  "version": "0.0.0",
+  "license": "GLPv3",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "build-parallel": "yarn workspaces --parallel run build",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "8.0.1"
+  }
 }
